@@ -27,7 +27,7 @@ def phi_function(n):
         while((n/i).is_integer()):
             factorlist.append(i)
             n = n//i
-    for i in range(103, int(math.sqrt(n), 2)):   
+    for i in range(103, int(math.sqrt(n)), 2):   
         while((n/i).is_integer()):
             factorlist.append(i)
             n = n//i
