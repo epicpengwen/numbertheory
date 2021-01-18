@@ -20,14 +20,14 @@ def phi_function(n):
     Euler's phi function: factors into list of primes to find ...
     """
     
-    listofprimes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101]
+    listofsmallprimes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101]
     factorlist = []
     #iterate through list of primes to check which factor into n, then adds to a factor list
-    for i in listofprimes:              
+    for i in listofsmallprimes:              
         while((n/i).is_integer()):
             factorlist.append(i)
             n = n//i
-    for i in range(101, int(math.sqrt(n))):   
+    for i in range(103, int(math.sqrt(n), 2)):   
         while((n/i).is_integer()):
             factorlist.append(i)
             n = n//i
@@ -40,4 +40,4 @@ def phi_function(n):
         k = factorlist.count(p)
         answer = answer * ((p**k) - (p**(k-1)))
     return(answer)
-print(phi_function(956331992007843552652604425031376690367))
+# print(phi_function(956331992007843552652604425031376690367))
