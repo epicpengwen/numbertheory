@@ -32,7 +32,7 @@ def encrypt(message):
     while isPrime(b) == False:
         b = random.randrange(10000, 200000)
     r = random.randrange(10000, 200000)
-    while isPrime(b) == False:
+    while isPrime(r) == False:
         r = random.randrange(10000, 200000)
     
     m = r * b
